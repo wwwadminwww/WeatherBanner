@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="columns.top">
+            <block name="weather.banner" template="SD_WeatherBanner::weather-banner.phtml" ifconfig="weather_banner/general/enable_weather_banner" before="-">
+                <arguments>
+                    <argument name="weather_banner_view_model" xsi:type="object">SD\WeatherBanner\ViewModel\WeatherBannerViewModel</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

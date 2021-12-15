@@ -1,0 +1,14 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $escaper \Magento\Framework\Escaper */
+/** @var \SD\WeatherBanner\ViewModel\WeatherBannerViewModel $weatherBannerViewModel */
+$weatherBannerViewModel = $block->getWeatherBannerViewModel();
+?>
+<?php if ($weatherBannerViewModel && $weatherBannerViewModel->getWeatherData() !== null): ?>
+    <div>
+        <div><?= $escaper->escapeHtml(__('City name:'))?><span><?= $escaper->escapeHtml($weatherBannerViewModel->getCityName()) ?></span></div>
+        <div><?= $escaper->escapeHtml(__('Temperature:'))?><span><?= $escaper->escapeHtml($weatherBannerViewModel->getTemperature()) ?></span></div>
+        <div><?= $escaper->escapeHtml(__('Pressure:'))?><span><?= $escaper->escapeHtml($weatherBannerViewModel->getPressure()) ?></span></div>
+        <div><?= $escaper->escapeHtml(__('Humidity:'))?><span><?= $escaper->escapeHtml($weatherBannerViewModel->getHumidity()) ?></span></div>
+    </div>
+<?php endif; ?>

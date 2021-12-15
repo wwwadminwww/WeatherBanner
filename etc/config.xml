@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <weather_banner>
+            <general>
+                <enable_weather_banner>0</enable_weather_banner>
+            </general>
+            <api_configuration>
+                <base_url>https://api.openweathermap.org/data/2.5/weather</base_url>
+                <city_name>Lublin</city_name>
+                <units_of_measurement>metric</units_of_measurement>
+            </api_configuration>
+        </weather_banner>
+    </default>
+</config>

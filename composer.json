@@ -1,0 +1,21 @@
+{
+  "name": "sd/weather-banner",
+  "version": "1.0.0",
+  "description": "This module will be getting weather data from API about the current weather in Lublin and show it on the website",
+  "type": "magento2-module",
+  "require": {
+      "php": "~7.4.0",
+      "magento/framework": "103.0.*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "SD\\WeatherBanner\\": ""
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="SD\WeatherBanner\Api\Data\WeatherDataInterface"
+                type="SD\WeatherBanner\Model\WeatherData"/>
+    <preference for="SD\WeatherBanner\Api\Data\WeatherDataSearchResultInterface"
+                type="Magento\Framework\Api\SearchResults"/>
+    <preference for="SD\WeatherBanner\Api\WeatherDataRepositoryInterface"
+                type="SD\WeatherBanner\Model\WeatherDataRepository"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="sd_weatherbanner_data_listing_data_source" xsi:type="string">WeatherBannerDataCollection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="WeatherBannerDataCollection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sd_weather_data</argument>
+            <argument name="resourceModel" xsi:type="string">SD\WeatherBanner\Model\ResourceModel\WeatherData</argument>
+        </arguments>
+    </virtualType>
+</config>
